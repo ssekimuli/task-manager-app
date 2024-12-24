@@ -1,7 +1,8 @@
 @extends('layout')
 
 @section('content')
-<h1 class="mb-4">Tasks for {{ $project->name }}</h1>
+<h1 class="mb-4">Tasks for {{ $project->name }}</h1> 
+<a href="/" class="btn btn-primary mt-4 mb-4">Home</a>
 <form method="POST" action="/tasks" class="form-inline mb-3">
     @csrf
     <div class="form-group mr-2">
