@@ -1,6 +1,18 @@
 @extends('layout')
 
 @section('content')
+<div class="mb-4">
+    <form method="GET" action="/projects/{{ $project->id }}/tasks" class="form-inline">
+        <label for="project" class="mr-2">Select Project:</label>
+        <select id="project" name="project" class="form-control" onchange="this.form.submit()">
+            @foreach($allProjects as $proj)
+                <option value="{{ $proj->id }}" {{ $proj->id == $project->id ? 'selected' : '' }}>
+                    {{ $proj->name }}
+                </option>
+            @endforeach
+        </select>
+    </form>
+</div>
 <h1 class="mb-4">Tasks for {{ $project->name }}</h1> 
 <a href="/" class="btn btn-primary mt-4 mb-4">Home</a>
 <form method="POST" action="/tasks" class="form-inline mb-3">
