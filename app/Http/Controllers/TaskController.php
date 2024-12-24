@@ -41,6 +41,20 @@ class TaskController extends Controller
         return response()->json(['message' => 'Priority updated']);
     }
 
+    public function update(Request $request, Task $task)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        $task->update([
+            'name' => $request->input('name'),
+        ]);
+
+        return redirect()->back()->with('success', 'Task updated successfully.');
+    }
+
+
     public function destroy(Task $task)
     {
         $task->delete();
