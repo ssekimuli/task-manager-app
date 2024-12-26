@@ -18,4 +18,11 @@ A simple Laravel web application for managing tasks with projects.
 
 5. Access the application at `http://localhost:8000`.
 
+## ABOUT ME
+ Name: Ssekimuli Andrew
+
+ Portfolio: https://ssekimuli.github.io/portfolio
+
+ Github: https://github.com/ssekimuli
+
 
